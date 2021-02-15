@@ -1913,6 +1913,12 @@ a:active {
   margin: 0 -22px 50px;
 }
 
+@media (max-width: 992px) {
+  .block-footer {
+    margin: 0 0 50px;
+  }
+}
+
 @media (max-width: 560px) {
   .block-footer {
     display: block;
@@ -1921,6 +1927,21 @@ a:active {
 
 .block-footer__col {
   padding: 0 22px;
+}
+
+@media (max-width: 992px) {
+  .block-footer__col {
+    padding: 0;
+  }
+  .block-footer__col:first-child {
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 992px) and (max-width: 560px) {
+  .block-footer__col:first-child {
+    padding: 0;
+  }
 }
 
 .block-footer__phones {
@@ -2984,9 +3005,12 @@ a:active {
   padding: 10px 20px;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 700px) {
   .navi-catalog {
-    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -3003,9 +3027,9 @@ a:active {
           align-items: center;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 700px) {
   .show-catalog {
-    display: block;
+    margin-bottom: 10px;
   }
 }
 
@@ -3066,6 +3090,17 @@ a:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 520px) {
+  .pagging__list li .pagging__item {
+    display: none;
+  }
+  .pagging__list li .pagging__item._active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .pagging__item {

@@ -447,8 +447,8 @@
 	border-top: 1px solid #ededed;
 	border-bottom: 1px solid #ededed;
 	padding: 10px 20px;
-	@media (max-width: 540px) {
-		display: block;
+	@media (max-width: 700px) {
+		flex-direction: column;
 	}
 	// .navi-catalog_top
 	&_top {
@@ -464,8 +464,8 @@
 .show-catalog {
 	display: flex;
 	align-items: center;
-	@media (max-width: 540px) {
-		display: block;
+	@media (max-width: 700px) {
+		margin-bottom: 10px;
 	}
 	// .show-catalog__label
 	&__label {
@@ -517,6 +517,16 @@
 	// .pagging__list
 	&__list {
 		display: flex;
+		@media (max-width: 520px) {
+			li {
+				.pagging__item {
+					display: none;
+					&._active {
+						display: flex;
+					}
+				}
+			}
+		}
 	}
 	// .pagging__item
 	&__item {
